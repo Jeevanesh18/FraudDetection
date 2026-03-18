@@ -1,3 +1,11 @@
+from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 🔥 allow all (for demo)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 import xgboost as xgb
 from fastapi import FastAPI
 import numpy as np
