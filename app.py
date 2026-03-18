@@ -104,15 +104,15 @@ def predict(data: dict):
         print("XGBoost approved")
         decision = "APPROVE"
 
-   # elif xgb_prob > 0.8:
-       # decision = "BLOCK"
+    elif xgb_prob > 0.8:
+       decision = "BLOCK"
 
     else:
         print("XGBoost not approved")
         used_finbert = True
         finbert_score = finbert_predict(data)
 
-        if finbert_score > 0.7:
+        if finbert_score > 0.69:
             decision = "BLOCK"
         else:
             decision = "APPROVE"
