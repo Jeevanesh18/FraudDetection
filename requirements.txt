@@ -2,7 +2,4 @@ fastapi
 uvicorn
 numpy
 xgboost
-transformers
-torch
-safetensors
 scikit-learn
