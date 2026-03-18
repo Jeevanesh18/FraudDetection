@@ -1,7 +1,4 @@
 import xgboost as xgb
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import torch
-torch.set_num_threads(1)
 from fastapi import FastAPI
 import numpy as np
 import time
