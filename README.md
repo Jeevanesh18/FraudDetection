@@ -17,10 +17,11 @@ This project simulates a **digital wallet fraud detection pipeline**:
 
 ## 🧱 Architecture
 <p align="center">
-  <img src="assets/data_flow.png" alt="Data flow" width="500">
+  <img src="pics/data_flow.jpeg" alt="Data flow" width="500">
   <br>
   <em>Figure 1: Data Flow</em>
 </p>
+
 Frontend (Lovable UI)  
         ↓  
 FastAPI Backend (Railway)  
@@ -110,7 +111,7 @@ precision    recall  f1-score   support
 ## 📊 Model Explainability (SHAP)
 
 <p align="center">
-  <img src="assets/SHAP.png" alt="SHAP" width="500">
+  <img src="pics/SHAP.png" alt="SHAP" width="500">
   <br>
   <em>Figure 2: SHAP Analysis</em>
 </p>
