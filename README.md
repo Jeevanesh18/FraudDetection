@@ -120,8 +120,11 @@ precision    recall  f1-score   support
 
 ## 🧠 Model 2 — FinBERT (NLP Layer)
 
-📎 Training Notebook:  
+### 📎 Training Notebook:  
 https://colab.research.google.com/drive/159lK-ZYVIzHCAYyCAblA_6-AqneoAA6o?usp=sharing
+
+### Fine tuned model:
+https://drive.google.com/drive/folders/1cA0fAGbrAvlowLslnzkwdVs3BRe8V2jC?usp=sharing
 
 ### Performance
 Accuracy: 0.6887
@@ -154,6 +157,8 @@ Deployed using Railway.
 ### Endpoint
 POST /predict
 
+### API URL
+https://web-production-c3c14.up.railway.app/predict
 
 ---
 
