@@ -126,18 +126,67 @@ https://colab.research.google.com/drive/159lK-ZYVIzHCAYyCAblA_6-AqneoAA6o?usp=sh
 ### Fine tuned model:
 https://drive.google.com/drive/folders/1cA0fAGbrAvlowLslnzkwdVs3BRe8V2jC?usp=sharing
 
+### 🎯 Objective
+Enhance fraud detection by incorporating unstructured contextual signals such as:
+
+- user chat logs
+
+- beneficiary aliases
+
+- device metadata
+
+This layer is designed to detect social engineering patterns (e.g., impersonation, urgency, scam intent) that are not captured by structured transaction features.
+
+## 🤖 Approach
+
+Fine-tuned a transformer-based model (initially FinBERT) for binary classification:
+
+- Fraudulent context
+
+- Non-fraudulent context
+
 ### Performance
 Accuracy: 0.6887
 
+### ⚠️ Limitations
 
-⚠️ Notes:
-- Binary classification (fraud vs non-fraud context)
-- Performance limited due to **synthetic text data**
-- Model not deployed due to:
-  - large size (~400MB)
-  - latency constraints
+- Performance is constrained by synthetic, LLM-generated training data
 
-👉 Currently replaced with a **mock scoring function** in production
+- Task mismatch: FinBERT is optimized for financial sentiment analysis, not fraud intent detection
+
+- Lack of real-world conversational fraud datasets significantly impacts generalization
+
+### ⚙️ Deployment Decision
+
+The NLP model was not deployed in production due to:
+
+- Large model size (~400MB)
+
+- High latency for real-time inference
+
+Instead, a lightweight heuristic scoring function is used to simulate contextual risk scoring in the deployed system.
+
+### 🧠 Design Insight
+
+This NLP layer is intended as a secondary decision system, triggered only when the structured model (XGBoost) is uncertain.
+
+This reflects real-world fraud detection systems, where:
+
+- fast models handle high-confidence decisions
+
+- deeper models analyze ambiguous cases
+
+### 🔮 Future Improvements
+
+- Replace FinBERT with lighter models (e.g., DistilBERT or MiniLM) for faster inference
+
+- Train on real-world scam / social engineering datasets
+
+- Apply model compression techniques (quantization, distillation) for deployment
+
+- Expand to multi-class classification (e.g., impersonation, phishing, urgency detection)
+
+- Integrate explainability for contextual predictions
 
 ---
 
