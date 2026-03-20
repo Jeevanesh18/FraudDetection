@@ -217,16 +217,19 @@ https://web-production-c3c14.up.railway.app/predict
   <br>
   <em>Figure 3: E-Wallet Homepage</em>
 </p>
+
 <p align="center">
   <img src="pics/sendMoney.png" alt="Transfer Page" width="500">
   <br>
   <em>Figure 4: Page to transfer money</em>
 </p>
+
 <p align="center">
   <img src="pics/backendData.png" alt="Backend Configurations" width="500">
   <br>
   <em>Figure 5: Data passed to the risk API</em>
 </p>
+
 <p align="center">
   <img src="pics/dashboard.png" alt="Admin Dashboard" width="500">
   <br>
