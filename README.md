@@ -3,6 +3,8 @@
 A real-time fraud detection system that combines structured transaction data with unstructured contextual signals (chat logs, device metadata, beneficiary aliases) to make intelligent approval/block decisions.
 
 ---
+## Pitching Video :
+https://www.youtube.com/watch?v=mv4GyDvcAuk
 
 ## 🚀 Overview
 
@@ -210,7 +212,28 @@ POST /predict
 https://web-production-c3c14.up.railway.app/predict
 
 ---
+<p align="center">
+  <img src="pics/ewalletHomepage.png" alt="E-Wallet Homepage" width="500">
+  <br>
+  <em>Figure 3: E-Wallet Homepage</em>
+</p>
+<p align="center">
+  <img src="pics/sendMoney.png" alt="Transfer Page" width="500">
+  <br>
+  <em>Figure 4: Page to transfer money</em>
+</p>
+<p align="center">
+  <img src="pics/backendData.png" alt="Backend Configurations" width="500">
+  <br>
+  <em>Figure 5: Data passed to the risk API</em>
+</p>
+<p align="center">
+  <img src="pics/dashboard.png" alt="Admin Dashboard" width="500">
+  <br>
+  <em>Figure 6: Admin Dashboard</em>
+</p>
 
+---
 ### 📥 Example Request
 
 ```json
